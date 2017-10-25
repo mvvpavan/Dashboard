@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/connect.css" />
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<!-- <script type="text/javascript" src="js/jquery-1.8.3.js"></script> -->
+<!-- <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.js"></script> -->
+<meta charset="ISO-8859-1">
+<title>DBA Utility</title>
+<script>
+	$(function() {
+
+		
+
+		function initDialog() {
+			$("#progressDialog").dialog({
+				dialogClass : "no-close",
+				autoOpen : true,
+				closeOnEscape : false,
+				resizable : false,
+				modal : true
+
+			});
+		}
+
+		initDialog();
+		function showProgress() {
+			$('#progressDialog').dialog("open");
+		}
+		function hideProgress() {
+			$('#progressDialog').dialog("close");
+		}
+		showProgress();
+		
+		</script>
+</head>
+
+<body>
+	<div id="progressDialog">
+		<div class="progress-label">Processing...</div>
+		<div id="progressbar"></div>
+	</div>
+
+</body>
+</html>

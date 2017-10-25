@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/trirand.ui.jqgrid.css" type="text/css" />
+<link rel="stylesheet" href="css/gurido-jquery-ui.css" type="text/css" />
+<link rel="stylesheet" href="css/dbautility.css" type="text/css" />
+<link rel="stylesheet" href="css/bootstrap-transfer.css" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="js/jquery-ui-sliderAccess.js"></script>
+<script type="text/javascript" src="js/jquery.fileupload.js"></script>
+<script type="text/javascript" src="js/jquery.jqGrid.min.js"></script>
+<script type="text/javascript" src="js/jquery.jqGrid.js"></script>
+<script type="text/javascript" src="js/grid.locale-en.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/jquery.inputmask.bundle.js"></script>
+<script type="text/javascript" src="js/dbautil/dbautility.js"></script>
+<script type="text/javascript" src="js/dbautil/appcataloggrid.js"></script>
+<script type="text/javascript" src="js/dbautil/dbcataloggrid.js"></script>
+<script type="text/javascript" src="js/dbautil/vmcataloggrid.js"></script>
+<script type="text/javascript" src="js/dbautil/dbautiltabs.js"></script>
+<script type="text/javascript" src="js/dbautil/runassysdbatab.js"></script>
+<script type="text/javascript" src="js/dbautil/runassysdbahisttab.js"></script>
+<script type="text/javascript" src="js/dbautil/catalogmenu.js"></script>
+<script type="text/javascript" src="js/dbautil/reportsmenu.js"></script>
+<script type="text/javascript" src="js/dbautil/settingsmenu.js"></script>
+
+
+<script type="text/javascript" src="js/dbautil/sessiontimeout.js"></script>
+
+<script type="text/javascript" src="js/dbautil/refreshtab.js"></script>
+<script type="text/javascript" src="js/dbautil/refreshhistory.js"></script>
+
+<script type="text/javascript" src="js/dbautil/flashbacktab.js"></script>
+<script type="text/javascript" src="js/dbautil/flashbackhistory.js"></script>
+
+<script type="text/javascript" src="js/dbautil/restarttab.js"></script>
+<script type="text/javascript" src="js/dbautil/restarthistory.js"></script>
+
+<script type="text/javascript" src="js/dbautil/analyzetab.js"></script>
+<script type="text/javascript" src="js/dbautil/analyzehistory.js"></script>
+
+<script type="text/javascript" src="js/dbautil/backuptab.js"></script>
+<script type="text/javascript" src="js/dbautil/backuphistory.js"></script>
+
+<script type="text/javascript" src="js/dbautil/importtab.js"></script>
+<script type="text/javascript" src="js/dbautil/importhistory.js"></script>
+
+<script type="text/javascript" src="js/dbautil/exporttab.js"></script>
+<script type="text/javascript" src="js/dbautil/exporthistory.js"></script>
+
+<script type="text/javascript" src="js/dbautil/svndbcomparisontab.js"></script>
+<script type="text/javascript" src="js/dbautil/svndbcomparisonreport.js"></script>
+<script type="text/javascript"
+	src="js/dbautil/svndbcomparisonhistorytab.js"></script>
+
+<script type="text/javascript"
+	src="js/dbautil/onsitetoinhouserefreshtab.js"></script>
+<script type="text/javascript"
+	src="js/dbautil/onsitetoinhouserefreshhistorytab.js"></script>
+
+<script type="text/javascript"
+	src="js/dbautil/inhousetoinhouserefreshtab.js"></script>
+<script type="text/javascript"
+	src="js/dbautil/inhousetoinhouserefreshhisttab.js"></script>
+<script type="text/javascript" src="js/dbautil/cpuresourcemanagertab.js"></script>
+<script type="text/javascript"
+	src="js/dbautil/cpuresourcemanagerhistorytab.js"></script>
+
+<script type="text/javascript" src="js/dbautil/dbcatalogtab.js"></script>
+<script type="text/javascript" src="js/dbautil/appcatalogtab.js"></script>
+<script type="text/javascript" src="js/dbautil/vmcatalogtab.js"></script>
+<script type="text/javascript" src="js/dbautil/dbdroptab.js"></script>
+<script type="text/javascript" src="js/dbautil/dbdrophistory.js"></script>
+
+<script type="text/javascript"
+	src="js/dbautil/cpuresourcemanagerhistorytab.js"></script>
+<!-- <script type="text/javascript" src="js/dbautil/reporttab1.js"></script> -->
+<script type="text/javascript" src="js/dbautil/reporttab.js"></script>
+<script type="text/javascript" src="js/dbautil/storagereporttab.js"></script>
+
+<script type="text/javascript" src="js/jquery-migrate-1.3.0.js"></script>
+<script type="text/javascript" src="js/jquery.blockUI-1.33.js"></script>
+
+<script type="text/javascript" src="js/dbautil/createdbtab.js"></script>
+<script type="text/javascript" src="js/dbautil/createdbtargethost.js"></script>
+<script type="text/javascript" src="js/dbautil/createdbhistory.js"></script>
+<script type="text/javascript" src="js/dbautil/cpulimit.js"></script>
+<script type="text/javascript" src="js/dbautil/v3datamodeltab.js"></script>
+<script type="text/javascript" src="js/dbautil/v3datamodelhistorytab.js"></script>
+<script type="text/javascript" src="js/dbautil/dbcodeanalyzertab.js"></script>
+<script type="text/javascript" src="js/dbautil/dbcodeanalyzerhistorytab.js"></script>
+<script type="text/javascript" src="js/dbautil/dbchangepwdtab.js"></script>
+<script type="text/javascript" src="js/dbautil/dbchangepwdhistorytab.js"></script>
+<script type="text/javascript" src="js/dbautil/v3datacomparisontab.js"></script>
+<script type="text/javascript" src="js/dbautil/v3datacomparisonhistory.js"></script>
+<script type="text/javascript" src="js/dbautil/addmreporttab.js"></script>
+
+<script src="js/bootstrap-transfer.js"></script>
+
+<title>DBA Utility</title>
+
+</head>
+<body>
+<div id="header">
+	<div class="logoDiv">
+		<div class="logo">
+			<a target="_blank"
+				href="https://www.vitechinc.com/wordpress/wp-content/uploads/2015/10/Official-Logo-Website.jpg">
+				<img
+				src="https://www.vitechinc.com/wordpress/wp-content/uploads/2015/10/Official-Logo-Website.jpg"
+				alt="Vitech Systems">
+			</a>
+		</div>
+	</div>
+	<div class='headingDiv'>
+		<p>DBA Utility</p>
+	</div>
+	<div class='loginAndLogout'>
+		<p id="loggedInAs">
+			Logged in as:&nbsp; <span id="loginAs" style="color: #ff751a;"></span>
+			<br> <a href="rest/DBAUtilRestService/logout" id="logout"
+				style="color: #006699;">Logout </a>
+		</p>
+	</div>
+</div>
+
+<div id='menuDiv'>
+	<ul class="menuUl">
+		<li class="menu">
+			<a href="#" class="dropdown-toggle"> 
+				<img src="css/images/catalog-icon2.png" alt="Settings" border="0"
+				width="20" height="20" style="position: relative; top: 5px;" />
+				Catalogs
+			</a>
+			<ul class="subMenu">
+				<li id="menu_vmCatalog"><a href="#" id="vmCatalog">VM Catalog</a></li>
+				<li id="menu_dbCatalog"><a href="#" id="dbCatalog">DB Catalog</a></li>
+				<li id="menu_appCatalog"><a href="#" id="appCatalog">APP Catalog</a></li>
+			</ul>
+		</li>
+
+		<li class="menu">
+			<a href="#" class="dropdown-toggle"> 
+				<img src="css/images/reports-icon2.png" alt="Settings" border="0"
+				width="20" height="20" style="position: relative; top: 5px;" />
+				Reports
+			</a>
+			<ul class="subMenu">
+				<li id="menu_dbReports"><a href="#" id="dbReports">DB Reports</a></li>
+				<li id="menu_storageReports"><a href="#" id="storageReports">Storage Reports</a></li>
+			</ul>
+		</li>
+
+		<li class="menu">
+			<a href="#" class="dropdown-toggle">
+				<img src="css/images/settings-icon.png" alt="Settings" border="0"
+				width="20" height="20" style="position: relative; top: 5px;" />
+				Settings
+			</a>
+			<ul class="subMenu">
+				<li id="menu_password"><a href="#" id="password">Password Change</a></li>
+				<li id="menu_email"><a href="#" id="email">E-mail Update</a></li>
+				<li id="menu_conversionDB"><a href="#" id="conversionDB">Conversion DB</a></li>
+				<li id="menu_managePermissions"><a href="#" id="managePermissions">Manage Permissions</a></li>
+				<li id="menu_releaseNotes"><a href="#" id="releaseNotes">Release Notes</a></li>
+				<li id="menu_manageClients"><a href="#" id="manageClients">Manage Clients</a></li>
+				<li id="menu_createUser"><a href="#" id="createUser">Add New User</a></li>
+			</ul>
+		</li>
+
+	</ul>
+</div>
+
+<div id="dataDiv">
+
+	<div id="tabs">
+		<ul>
+			<li id="dbRefresh"><a href="#tabs-1">DB Refresh</a></li>
+			<li id="dbFlashback"><a href="#tabs-2">DB Flashback</a></li>
+			<li id="dbRestart"><a href="#tabs-3">DB Restart</a></li>
+			<li id="dbAnalyze"><a href="#tabs-4">DB Analyze</a></li>
+			<li id="dbBackup"><a href="#tabs-5">DB Backup</a></li>
+			
+			<li id="dbImport"><a href="#tabs-6">DB Import</a></li>
+			<li id="dbExport"><a href="#tabs-7">DB Export</a></li>
+			<li id="dbSVNComparison"><a href="#tabs-8">DB SVN Comparison</a></li>
+			<li id="dbOsToIhRefresh"><a href="#tabs-9">DB OS To IH Refresh</a></li>
+			<li id="dbIhToIhRefresh"><a href="#tabs-10">DB IH To IH Refresh</a></li>
+			
+			<li style="display :none;"><a href="#tabs-11">VM Catalog</a></li>
+			<li style="display :none;"><a href="#tabs-12">DB Catalog</a></li>
+			<li style="display :none;"><a href="#tabs-13">APP Catalog</a></li>
+			<li id="createDB"><a href="#tabs-14">Create DB</a></li>
+			<li id="dropDB"><a href="#tabs-15">Drop DB</a></li>
+			
+			<li id="cpuResourceManager"><a href="#tabs-16">CPU Resource Manager</a></li>
+			<li id="runAsSysDba"><a href="#tabs-17">Run As SYS DBA</a></li>
+			<li id="v3Datamodel"><a href="#tabs-18">V3 DataModel</a></li>
+<!-- 		<li id="dbCodeAnalyzer"><a href="#tabs-19">DB Code Analyzer</a></li> -->
+<!-- 		<li id="dbChangePassword"><a href="#tabs-20">DB Change Password</a></li> -->
+
+<!-- 		<li id="v3DataComparison"><a href="#tabs-21">V3 Data Comparison</a></li> -->
+			<li id="addmReport"><a href="#tabs-22">ADDM Report</a></li>
+			<li style="display :none;"><a href="#tabs-23">DB Reports</a></li>
+			<li style="display :none;"><a href="#tabs-24">Storage Reports</a></li>
+			<li style="display :none;"><a href="#tabs-25">Release Notes</a></li>
+		</ul>
+
+		<div id="tabs-1">
+			<table>
+				<tr>
+					<td>
+						<table id="DBRefreshGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbRefreshPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBRefreshHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbRefreshHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-2">
+			<table>
+				<tr>
+					<td>
+						<table id="DBFlashBackGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbFlashBackPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBFlashBackHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbFlashBackHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-3">
+			<table>
+				<tr>
+					<td>
+						<table id="DBRestartGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbRestartPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBRestartHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbRestartHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-4">
+			<table>
+				<tr>
+					<td>
+						<table id="DBAnalyzeGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbAnalyzePager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBAnalyzeHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbAnalyzeHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-5">
+			<table>
+				<tr>
+					<td>
+						<table id="DBBackupGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbBackupPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBBackupHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbBackupHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-6">
+			<table>
+				<tr>
+					<td>
+						<table id="DBImportGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbImportPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBImportHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbImportHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-7">
+			<table>
+				<tr>
+					<td>
+						<table id="DBExportGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbExportPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBExportHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbExportHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-8">
+			<table>
+				<tr>
+					<td>
+						<table id="DBSVNComparisonGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbSVNComparisonPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBSVNComparisonHistoryGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbSVNComparisonHistoryPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-9">
+			<table>
+				<tr>
+					<td>
+						<table id="DBOSToIHRefreshGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbOSToIHRefreshPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBOSToIHRefreshHistoryGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbOSToIHHistoryPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-10">
+			<table>
+				<tr>
+					<td>
+						<table id="DBIHToIHRefreshGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbIHToIHRefreshPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBIHToIHRefreshHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbIHToIHRefreshHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-11">
+			<div
+				style="padding: .3em .2em .2em .3em; allign: center; border: solid #4297d7 border-collapse: separate; border-spacing: 2px;">
+				<p class="catalogTitle"> &nbsp;&nbsp;VM Catalog </p> 
+				<table class="filterOptionsTable">
+					<tr>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important">
+								Host Location : </label></td>
+						<td><select id="hostLocationForVMCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important">
+								Host Name : </label></td>
+						<td><select id="hostNameForVMCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important">VM
+								Type : </label></td>
+						<td><select id="vmType"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+								<option value="DB">DB</option>
+								<option value="APP">APP</option>
+						</select></td>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important">
+								VM IP : </label></td>
+						<td><select id="vmIP"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+					</tr>
+					<tr>
+						<td><label
+							style="font-style: bold; font-size: 15px !important">
+								Client : </label></td>
+						<td><select id="clientSelectedForVMCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important"> VM
+								Name : </label></td>
+						<td><select id="vmNameForVMCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important">
+								Version : </label></td>
+						<td><select id="versionForVMCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+					</tr>
+				</table>
+			</div>
+			<div class="filterButtonsRow">
+				<div class="filterButtonsDiv" style="padding-left: 75%">
+					<table>
+						<tr align="right">
+							<td colspan="6">
+								<table>
+									<tr>
+										<td>
+											<button id="vmFilterButton" class="filterButtons"
+												type="button"  style='display: none;'>Filter</button>
+										</td>
+										<td></td>
+										<td></td>
+										<td>
+											<button id="vmResetButton" type="button"
+												class="filterButtons">Reset</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<table>
+				<tr>
+					<td>
+						<table id="VMCatalogForDBAGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="vmCatalogForDBAGridPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-12">
+			<div
+				style="padding: .3em .2em .2em .3em; allign: center; border: solid #4297d7 border-collapse: separate; border-spacing: 2px;">
+				<p class="catalogTitle"> &nbsp;&nbsp;DB Catalog </p> 
+				<table class="filterOptionsTable">
+					<tr>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important">
+								Host Location : </label></td>
+						<td><select id="hostLocationForDBCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important">
+								Host Name : </label></td>
+						<td><select id="hostNameForDBCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important"> VM
+								Name : </label></td>
+						<td><select id="vmNameForDBCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+					</tr>
+
+					<tr>
+						<td><label
+							style="font-style: bold; font-size: 15px !important">
+								Client : </label></td>
+						<td><select id="clientSelectedForDBCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td><label
+							style="font-style: bold; font-size: 15px !important"> SID
+								: </label></td>
+						<td nowrap><select id="sidForDBCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important"> DB
+								Status : </label></td>
+						<td><select id="dbStatus"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+								<option value="ALL">ALL</option>
+								<option value="STARTED">STARTED</option>
+								<option value="STOPPED">STOPPED</option>
+						</select></td>
+					</tr>
+				</table>
+			</div>
+			<div class="filterButtonsRow">
+				<div class="filterButtonsDiv" style="padding-left: 75%">
+					<table>
+						<tr align="right">
+							<td colspan="6">
+								<table>
+									<tr>
+										<td>
+											<button id="dbFilterButton" class="filterButtons"
+												type="button"  style='display: none;'>Filter</button>
+										</td>
+										<td></td>
+										<td></td>
+										<td>
+											<button id="dbResetButton" type="button"
+												class="filterButtons">Reset</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<table>
+				<tr>
+					<td>
+						<table id="DBCatalogForDBAGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbCatalogForDBAGridPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-13">
+			<div
+				style="padding: .3em .2em .2em .3em; allign: center; border: solid #4297d7 border-collapse: separate; border-spacing: 2px;">
+				<p class="catalogTitle"> &nbsp;&nbsp;APP Catalog </p> 
+				<table class="filterOptionsTable">
+					<tr>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important">
+								Host Location : </label></td>
+						<td><select id="hostLocationForAPPCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important">
+								Host Name : </label></td>
+						<td><select id="hostNameForAPPCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td>
+					</tr>
+					<tr>
+						<td><label
+							style="font-style: bold; font-size: 15px !important">
+								Client : </label></td>
+						<td><select id="clientSelectedForAPPCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+						<td nowrap><label
+							style="font-style: bold; font-size: 15px !important"> VM
+								Name : </label></td>
+						<td><select id="vmNameForAPPCatalog"
+							class="text ui-widget-content ui-corner-all"
+							style="height: 30px; width: 100% !important">
+						</select></td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="filterButtonsRow">
+				<div class="filterButtonsDiv" style="padding-left: 75%">
+					<table>
+						<tr align="right">
+							<td colspan="6">
+								<table>
+									<tr>
+										<td>
+											<button id="appFilterButton" class="filterButtons"
+												type="button" style='display: none;'>Filter</button>
+										</td>
+										<td></td>
+										<td></td>
+										<td>
+											<button id="appResetButton" type="button"
+												class="filterButtons">Reset</button>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<table>
+				<tr>
+					<td>
+						<table id="APPCatalogGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="appCatalogGridPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="tabs-14">
+			<table>
+				<tr>
+					<td>
+						<table id="createDBGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="createDBPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="createDBHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="createDBHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="tabs-15">
+			<table>
+				<tr>
+					<td>
+						<table id="DBDropGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbDropPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="DBDropHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbDropHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-16">
+			<table>
+				<tr>
+					<td>
+						<table id="CPUResourceManagerGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="cpuResourceManagerPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="CPUResourceManagerHistoryGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="cpuResourceManagerPagerHistoryPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="tabs-17">
+			<table>
+				<tr>
+					<td>
+						<table id="RunAsSysDBAGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="runAsSysDBAPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="RunAsSysDBAHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="runAsSysDBAHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="tabs-18">
+			<table>
+				<tr>
+					<td>
+						<table id="datamodelGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="datamodelPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="datamodelHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="datamodelHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="tabs-19">
+			<table>
+				<tr>
+					<td>
+						<table id="dbCodeAnalyzerGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbCodeAnalyzerPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="dbCodeAnalyzerHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbCodeAnalyzerHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="tabs-20">
+			<table>
+				<tr>
+					<td>
+						<table id="dbChangePwdGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbChangePwdPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="dbChangePwdHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="dbChangePwdHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="tabs-21">
+			<table>
+				<tr>
+					<td>
+						<table id="v3DataComparisonGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="v3DataComparisonPager"></div>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<table id="v3DataComparisonHistGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="v3DataComparisonHistPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="tabs-22">
+			<table>
+				<tr>
+					<td>
+						<table id="addmReportGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="addmReportPager"></div>
+					</td>
+				</tr>
+<!-- 				<tr> -->
+<!-- 					<td></td> -->
+<!-- 				</tr> -->
+<!-- 				<tr> -->
+<!-- 					<td></td> -->
+<!-- 				</tr> -->
+<!-- 				<tr> -->
+<!-- 					<td> -->
+<!-- 						<table id="dbChangePwdHistGrid"> -->
+<!-- 							<tr> -->
+<!-- 								<td></td> -->
+<!-- 							</tr> -->
+<!-- 						</table> -->
+<!-- 						<div id="dbChangePwdHistPager"></div> -->
+<!-- 					</td> -->
+<!-- 				</tr> -->
+				<tr>
+					<td>
+						<div style="height: 104px"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="tabs-23">
+			<div id="dbReportsOptionDiv" style="padding: 5px; allign: center;">
+				<label style="font-style: bold; font-size: 15px !important">
+					Report Type : </label> <select id="typeOfDBReport"
+					class="text ui-widget-content ui-corner-all"
+					style="height: 30px; width: 300px">
+					<option value="select">Select</option>
+					<option value="bendevschemasize">Bendev Schema Size</option>
+					<option value="benloadschemasize">Benload Schema Size</option>
+					<option value="nonv3schemaspaceutil">Non V3 Schemas Space
+						Utilization</option>
+					<option value="toptables">Top Tables</option>
+					<option value="rsrcutilsmry">Resource Utilization Summary</option>
+
+					<option value="rsrcutildet">Resource Utilization Details</option>
+					<option value="freespaceintblspace">Table Spaces Out Of
+						Space</option>
+					<option value="scrambledbs">Scrambled Databases</option>
+					<option value="dbsarchlist">DBs Archive List</option>
+					<option value="dbsarchlognobckupconfig">DBs Archive No
+						Backup Config</option>
+					<option value="dbsflashbacklist">DBs Flashback List</option>
+					<option value="dbsflashbacknocatalog">DBs Flashback No
+						Catalog</option>
+
+					<option value="dbvmrootoutofspace">DBVM Root Outof Space</option>
+					<option value="dbvmu01outofspace">DBVM U01 Outof Space</option>
+					<option value="nonv3schemassummary">Non V3 Schemas Summary</option>
+					<option value="dbvolumeswithoutdatabases">DB Volumes
+						Without Databases</option>
+					<option value="dborataboutsync">DB ORATab Out Sync</option>
+
+					<option value="fstaboutsync">FSTab Out Sync</option>
+					<option value="dbvmfreespace">DBVM Free Space</option>
+					<option value="dbvolumesoutofspace">DB Volumes Out of
+						Space</option>
+					<option value="dblogsoutofspace">DB Logs Out of Space</option>
+					<option value="benloadtoptables">BenLoad Top Tables</option>
+
+					<option value="dbspacestate">DB Space Usage</option>
+					<option value="tempundousagereport">Temp Undo Usage Report</option>
+					<option value="unaccountedspacereport">Un Accounted Space</option>
+				</select> <label style="font-style: bold; font-size: 15px"> Last
+					Report Generated Date : </label> <span
+					style="color: Red; font-size: 15px; font-style: bold;"
+					id="dbReportGeneratedDate"></span>
+			</div>
+
+			<table>
+				<tr>
+					<td>
+						<table id="reportGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="reportPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-24">
+			<div style="padding: 5px; allign: center;">
+				<label style="font-style: bold; font-size: 15px"> Storage
+					Report Type : </label> <select id="typeOfStorageReport"
+					class="text ui-widget-content ui-corner-all"
+					style="height: 30px; width: 300px">
+					<option value="select">Select</option>
+
+					<option value="storageBreakupByClient">Storage Breakup by
+						Client</option>
+					<option value="sanSumamry">SAN Summary</option>
+					<option value="clientSumamry">Client Summary</option>
+					<option value="practiseLead">Practice Lead</option>
+					<option value="sanUsageSummaryDiff">SAN Usage Summary
+						Difference</option>
+
+					<!-- 						<option value="select">Select</option> -->
+					<!-- 						<option value="storageBreakupByClient">Storage Breakup by -->
+					<!-- 							Client</option> -->
+					<!-- 						<option value="storageBreakupByClientHist">Storage -->
+					<!-- 							Breakup by Client History</option> -->
+					<!-- 						<option value="sanSumamry">SAN Summary</option> -->
+					<!-- 						<option value="sanSumamryHist">SAN Summary History</option> -->
+					<!-- 						<option value="clientSumamry">Client Summary</option> -->
+					<!-- 						<option value="clientSumamryHist">Client Summary History -->
+					<!-- 						</option> -->
+					<!-- 						<option value="practiseLead">Practice Lead</option> -->
+					<!-- 						<option value="practiseLeadHist">Practice Lead History</option> -->
+					<!-- 						<option value="sanUsageSummaryDiff">SAN Usage Summary -->
+					<!-- 							Difference</option> -->
+
+				</select> <label style="font-style: bold; font-size: 15px"> Last
+					Report Generated Date : </label> <span
+					style="color: Red; font-size: 15px; font-style: bold;"
+					id="storageReportGeneratedDate"></span>
+			</div>
+
+			<table>
+				<tr>
+					<td>
+						<table id="storageReportGrid">
+							<tr>
+								<td></td>
+							</tr>
+						</table>
+						<div id="storageReportPager"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="tabs-25">
+			<div id="releaseNotesDiv" style="padding: 5px; allign: center">
+				<label style="position: relative; font-weight: 100; top: 15px; left: 10px; font-size: 22px !important; color: #111; font-family: 'Benton Sans Light',Helvetica,sans-serif; ">
+					What's New ?
+				</label>
+
+				<ul style="position: relative;top: 8px;list-style-type: disc;">
+					<li class="whatsNew">Added prompt of 'Change Password' on first login for new users</li>
+					<li class="whatsNew">Changed Heading layout for Catalog windows</li>
+					<li class="whatsNew">In Catalog windows, Displaying Filtered results on change of drop down itself.</li>
+				</ul>
+				
+				<label style="position: relative; font-weight: 100; top: 5px; left: 10px; font-size: 22px !important; color: #111; font-family: 'Benton Sans Light',Helvetica,sans-serif; ">
+					Stable Releases
+				</label>
+				
+				<br>
+				
+				<label class = "releaseNotes_version">
+					DBA Utility 10.1
+				</label>
+				
+				<div class="releaseNotes_versionDiv">
+				<ul class="releaseNotes_subVersionList">
+				
+					<li>
+						<a href="#" class="releaseNotes_subVersionLink" id="releaseNotes_subVersion_1015">
+						 Version 10.1.5
+						</a>
+						<span class="releaseNotes_releaseDate"> - Released on December 26, 2016 </span>
+						<div class="releaseNotes_subVersionDiv" id="releaseNotes_subVersion_1015_div">
+							<ul class="releaseNotes_enhancementsList">
+								<li class="releaseNotes_enhancementsListItem">For double click on any record, Utility will display Row information in vertical format as a popup</li>
+								<li class="releaseNotes_enhancementsListItem">Show/Hide form fields of Add, Edit windows based on Source OS type under ‘DB OS to IH Refresh’ tab</li>
+								<li class="releaseNotes_enhancementsListItem">Few formatting changes for text area fields under DB Import and DB Export tabs to enhance Readability</li>
+							</ul>
+						</div>
+					</li>
+				
+					<li>
+						<a href="#" class="releaseNotes_subVersionLink" id="releaseNotes_subVersion_1014">
+						 Version 10.1.4 
+						</a>
+						<span class="releaseNotes_releaseDate"> - Released on December 02, 2016 </span>
+						<div class="releaseNotes_subVersionDiv" id="releaseNotes_subVersion_1014_div">
+							<ul class="releaseNotes_enhancementsList">
+								<li class="releaseNotes_enhancementsListItem">Displaying 'Start time' field based on back up frequency under DB Backup</li>
+								<li class="releaseNotes_enhancementsListItem">Updated all the History windows such that they display only last two months information</li>
+								<li class="releaseNotes_enhancementsListItem">Hilighted Find/Search button with varied colour if History window is displaying filtered records</li>
+								<li class="releaseNotes_enhancementsListItem">Changed font size for Conversion DB, Manage Permissions, Manage Clients  windows to improve readability</li>
+							</ul>
+						</div>
+					</li>
+				
+					<li>
+						<a href="#" class="releaseNotes_subVersionLink" id="releaseNotes_subVersion_1013">
+						 Version 10.1.3 
+						</a>
+						<span class="releaseNotes_releaseDate"> - Released on November 23, 2016 </span>
+						<div class="releaseNotes_subVersionDiv" id="releaseNotes_subVersion_1013_div">
+							<ul class="releaseNotes_enhancementsList">
+								<li class="releaseNotes_enhancementsListItem">Added a menu named 'Add New User' under 'Settings' menu to create a new user login to access the tool
+</li>
+								<li class="releaseNotes_enhancementsListItem">Added new menu 'Manage Clients' under 'Settings' to define/modify client access to a particular user</li>
+								<li class="releaseNotes_enhancementsListItem">Enabled selection of 'Target Client' under DB Refresh for 'V3OPS' user (Earlier it's only available to DB Admin)
+</li>
+								<li class="releaseNotes_enhancementsListItem">Sorted DB Refresh History Data based on refresh start time by default
+</li>
+							</ul>
+						</div>
+					</li>
+				
+					<li>
+						<a href="#" class="releaseNotes_subVersionLink" id="releaseNotes_subVersion_1012">
+						 Version 10.1.2 
+						</a>
+						<span class="releaseNotes_releaseDate"> - Released on November 15, 2016 </span>
+						<div class="releaseNotes_subVersionDiv" id="releaseNotes_subVersion_1012_div">
+							<ul class="releaseNotes_enhancementsList">
+								<li class="releaseNotes_enhancementsListItem">Enabled  'Create DB' utility for 'V3OPS' user login </li>
+								<li class="releaseNotes_enhancementsListItem">Added 'Release Notes' under 'Settings' menu, which illustrates all the enhancements that are made to utility
+</li>
+								<li class="releaseNotes_enhancementsListItem">Restricted selection of 'Target Client' to all users except 'dbadmin' in DB Refresh</li>
+								<li class="releaseNotes_enhancementsListItem">Enlarged form fields of Add, Edit windows for readability in DB Flashback</li>
+								<li class="releaseNotes_enhancementsListItem">Displaying 'Recurring Frequency' spinner based on recurring refresh check box under DB Refresh</li>
+							</ul>
+						</div>
+					</li>
+					
+					<li>
+						<a href="#" class="releaseNotes_subVersionLink" id="releaseNotes_subVersion_1011">
+						 Version 10.1.1 
+						</a>
+						<span class="releaseNotes_releaseDate"> - Released on November 4, 2016 </span>
+						<div class="releaseNotes_subVersionDiv" id="releaseNotes_subVersion_1011_div">
+							<ul class="releaseNotes_enhancementsList">
+								<li class="releaseNotes_enhancementsListItem">Displaying 'Restore point type', 'restore point time' fields based on flashback type dropdown under DB Flashback</li>
+								<li class="releaseNotes_enhancementsListItem">Populate 'flashback type' dropdown options in edit window, based on flashback status in DB Flashback</li>
+								<li class="releaseNotes_enhancementsListItem">Updated Vitech logo with newer one in the header part</li>
+								<li class="releaseNotes_enhancementsListItem">Displaying 'Disable Archiving' checkbox based on flashback type dropdown under DB Flashback</li>
+							</ul>
+						</div>
+					</li>
+					<li> 
+						<a href="#" class="releaseNotes_subVersionLink" id="releaseNotes_subVersion_1010">
+						Version 10.1.0 
+						</a>
+						<span class="releaseNotes_releaseDate">- Released on October 28, 2016 </span>
+						<div class="releaseNotes_subVersionDiv" id="releaseNotes_subVersion_1010_div">
+							<ul class="releaseNotes_enhancementsList">
+								<li class="releaseNotes_enhancementsListItem">Utility will display required menus based on user login, by using configuration table(conatin User priviliges) maintained by DB Admin</li>
+								<li class="releaseNotes_enhancementsListItem">Added new menu named 'Manage Permissions' under 'Settings' menu to manage users and their permissions(Visible only to 'dbadmin' user)</li>
+								<li class="releaseNotes_enhancementsListItem">Added new filter named 'VM Ip' to search results based on vm ip, under 'VM Catalog'</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				</div>
+				
+				<label class = "releaseNotes_version">
+					DBA Utility 10.0
+				</label>
+				
+				<div class="releaseNotes_versionDiv">
+				<ul class="releaseNotes_subVersionList">
+					<li> 
+						<a href="#" class="releaseNotes_subVersionLink" id="releaseNotes_subVersion_1002">
+						Version 10.0.2 
+						</a>
+						<span class="releaseNotes_releaseDate">- Released on October 18, 2016 </span>
+						<div class="releaseNotes_subVersionDiv" id="releaseNotes_subVersion_1002_div">
+							<ul class="releaseNotes_enhancementsList">
+								<li class="releaseNotes_enhancementsListItem">Disabled minute slider functionality for date fields in add record window, under ‘ADDM Reports’ tab</li>
+								<li class="releaseNotes_enhancementsListItem">Moved 'DB Reports' and 'Storage Reports' to main UI window rather showing them as pop-up</li>
+								<li class="releaseNotes_enhancementsListItem">Fixed 'CPU Limit' issue(to manage total CPU allocation) under CPU Resource Manager</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="releaseNotes_subVersionLink" id="releaseNotes_subVersion_1001">
+						 Version 10.0.1 
+						</a>
+						<span class="releaseNotes_releaseDate"> - Released on October 5, 2016 </span>
+						<div class="releaseNotes_subVersionDiv" id="releaseNotes_subVersion_1001_div">
+							<ul class="releaseNotes_enhancementsList">
+								<li class="releaseNotes_enhancementsListItem">Added new tab named 'V3 Data model' which allows user to compare datamodel between two databases</li>
+								<li class="releaseNotes_enhancementsListItem">Added new tab named 'ADDM Reports' and used to get addm reports of an instance for specified time period</li>
+								<li class="releaseNotes_enhancementsListItem">Fixed 'VM IP' auto population issue under Create DB tab</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- <div id="dbReportsDiv" title="DB Reports">
+	 </div>
+ -->
+<!-- <div id="storageReportsDiv" title="Storage Reports">
+	 </div>
+ -->
+
+<div id="svnReportDialogForm"
+	style="height: 97px!importnant; width: 580px">
+	<label for="reportTypes" style="font-style: bold; font-size: 15px">
+		Report Type : </label> <select name="svnDBComparisonReportType"
+		id="svnDBComparisonReportType"
+		class="text ui-widget-content ui-corner-all"
+		style="height: 30px; width: 400px">
+		<option value='Select'>Select</option>
+		<option value="1">Objects Missing in SVN and exists in Target
+			DB</option>
+		<option value="2">Objects Missing in DB and exists in SVN</option>
+		<option value="3">Objects Exist in SVN and DB but not same
+			column or datatype</option>
+		<option value="4">Invalid/Disabled Objects in Target DB</option>
+
+	</select> <br> <br>
+	<table>
+		<tr>
+			<td>
+				<table id="DBSVNComparisonReportSummaryGrid">
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+				<div id="dbSVNComparisonReportSummaryPager"></div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+				<table id="DBSVNComparisonReportDetailsGrid">
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+				<div id="dbSVNComparisonReportDetailsPager"></div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div id="emailDialogForm" title=" Email Update "
+	style="height: 37px!importnant; width: 380px">
+	<div id="emailErrorMessage" style="color: red; padding: 5px;">
+		<div></div>
+	</div>
+	<form name="emailForm" id="emailForm">
+		<label for="clientName" style="font-style: bold; font-size: 15px">
+			Client : </label> <select name="clientName" id="clientName"
+			class="text ui-widget-content ui-corner-all"
+			style="height: 30px; width: 200px">
+		</select> <br> <br> <label for="name"
+			style="font-style: bold; font-size: 15px"> E-Mail : </label> <input
+			type="textarea" name="emailVal" id="emailVal" value=""
+			class="text ui-widget-content ui-corner-all"
+			style="height: 30px; width: 400px">
+
+	</form>
+</div>
+
+<div id="emailUpdatedDiv" title=" Success ">
+	<p>Email is updated successfully.</p>
+</div>
+
+<div id="passwrdDialogForm" title=" Change Password "
+	style="height: 37px!importnant; width: 380px">
+	<div id="pwrdErrorMessage" style="color: red; padding: 5px;">
+		<div></div>
+	</div>
+	<form name="newPasswordForm" id="newPasswordForm">
+		<label for="name" style="font-style: bold; font-size: 15px">New
+			Password : </label> <input type="password" name="password" id="passwordVal"
+			value="" class="text ui-widget-content ui-corner-all"
+			style="height: 30px; width: 300px">
+	</form>
+</div>
+
+<div id="passwrdUpdatedDiv" title=" Success ">
+	<p>Password is updated successfully.</p>
+</div>
+
+<div id="conversionDB_Div" title=" Conversion Database Update "
+	style="height: 107px !importnant; width: 1050px; font-size: 12px !important;">
+
+	<div id="conversionDB_ErrorMessage" style="color: red; padding: 5px;">
+		<div></div>
+	</div>
+
+	<form name="conversionDBForm" id="conversionDBForm">
+		<label for="clientForConverisonDB"
+			style="font-style: bold; padding-top: 20px; font-size: 15px">
+			Client : </label> <select name="clientForConverisonDB"
+			id="clientForConverisonDB"
+			class="text ui-widget-content ui-corner-all"
+			style="height: 30px; width: 400px">
+		</select> <br>
+		<div id="conversionDBEnableWidgets">
+			<div id="conversionDBEnableWidgetArea"
+				style="width: 600px; padding-top: 10px;"></div>
+		</div>
+	</form>
+
+</div>
+
+<div id="managePermissions_div" title=" Manage Users Permissions "
+	style="height: 107px !importnant; width: 1050px; font-size: 12px !important;">
+
+	<div id="managePermissions_errorMessage" style="color: red; padding: 5px;">
+		<div></div>
+	</div>
+
+	<form name="managePermissionsForm" id="managePermissionsForm">
+		<label for="managePermissions_userId"
+			style="font-style: bold; padding-top: 20px; font-size: 15px">
+			User : </label> <select name="managePermissions_userId"
+			id="managePermissions_userId"
+			class="text ui-widget-content ui-corner-all"
+			style="height: 30px; width: 400px">
+		</select> <br>
+		<div id="managePermissionsEnableWidgets">
+			<div id="managePermissionsEnableWidgetArea"
+				style="width: 600px; padding-top: 10px;"></div>
+		</div>
+	</form>
+
+</div>
+
+<div id="manageClients_div" title=" Manage Clients "
+	style="height: 107px !importnant; width: 1050px;font-size: 12px !important;">
+
+	<div id="manageClients_errorMessage" style="color: red; padding: 5px;">
+		<div></div>
+	</div>
+
+	<form name="manageClientsForm" id="manageClientsForm">
+		<label for="manageClients_userId"
+			style="font-style: bold; padding-top: 20px; font-size: 15px">
+			User : </label> <select name="manageClients_userId"
+			id="manageClients_userId"
+			class="text ui-widget-content ui-corner-all"
+			style="height: 30px; width: 400px">
+		</select> <br>
+		<div id="manageClientsEnableWidgets">
+			<div id="manageClientsEnableWidgetArea"
+				style="width: 600px; padding-top: 10px;"></div>
+		</div>
+	</form>
+
+</div>
+
+<div id="createUserDiv" title=" Add New User " >
+<!-- 	style="height: 200px!importnant; width: 420px"> -->
+	<div id="createUser_errorMessage" style="color: red; padding: 5px;">
+		<div></div>
+	</div>
+	<form name="createUserForm" id="createUserForm">
+	<table id="createUserTable" class="EditTable" cellspacing="0"
+				cellpadding="0" border="0">
+				<tr rowpos="1" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">
+						<label for="createUser_userID" style="font-style: bold; font-size: 15px"> User ID : </label> 
+					</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px; padding-left: 20px;">
+						<input type="text" name="createUser_userID" id="createUser_userID" value=""
+			class="text ui-widget-content ui-corner-all"
+			style="height: 30px; width: 260px">
+					</td>
+				</tr>
+				
+				<tr rowpos="2" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">
+						<label for="createUser_username" style="font-style: bold; font-size: 15px"> Username : </label> 
+					</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px; padding-left: 20px;">
+						<input type="text" name="createUser_username" id="createUser_username" value=""
+			class="text ui-widget-content ui-corner-all"
+			style="height: 30px; width: 260px">
+					</td>
+				</tr>
+				
+				<tr rowpos="3" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">
+						<label for="createUser_password" style="font-style: bold; font-size: 15px"> Password : </label>  
+					</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px; padding-left: 20px;">
+						<input type="password" name="createUser_password" id="createUser_password" value=""
+			class="text ui-widget-content ui-corner-all"
+			style="height: 30px; width: 260px"> 
+					</td>
+				</tr>
+				
+				<tr rowpos="4" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">
+						<label for="createUser_retypePassword" style="font-style: bold; font-size: 15px"> Retype Password : </label>   
+					</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px; padding-left: 20px;">
+						<input type="password" name="createUser_retypePassword" id="createUser_retypePassword" value=""
+			class="text ui-widget-content ui-corner-all"
+ 			style="height: 30px; width: 260px">
+					</td>
+				</tr>
+				
+				<tr rowpos="5" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">
+						<label for="createUser_email" style="font-style: bold; font-size: 15px"> E-Mail : </label>   
+					</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px; padding-left: 20px;">
+							<textarea
+							rows="1" cols="25" id="createUser_email" rowid="_empty"
+							role="textbox" multiline="true"
+							class="FormElement ui-widget-content ui-corner-all"></textarea>
+					</td>
+				</tr>
+				
+				<tr rowpos="6" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">
+						<label for="createUser_comments" style="font-style: bold; font-size: 15px"> Comments : </label>   
+					</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px; padding-left: 20px;">
+						<textarea
+							rows="1" cols="25" id="createUser_comments" rowid="_empty"
+							role="textbox" multiline="true"
+							class="FormElement ui-widget-content ui-corner-all"></textarea>
+					</td>
+				</tr>
+				
+			</table>
+	</form>
+</div>
+
+<div id="userCreatedDiv" title=" Success ">
+	<p>User is created successfully.</p>
+</div>
+
+<div id="createUser_ErrorDiv" title=" Error ">
+	<p>Username already exists</p>
+</div>
+
+<div id='createDB_addRecordDiv' title="Add Record"
+	class="ui-jqdialog-content ui-widget-content">
+	<div>
+		<div id="createDB_errorMessage" style="color: red; padding: 5px;">
+		<div></div>
+		</div>
+		<form id="form_CreateDB" class="FormGrid"
+			style="width: auto; overflow: auto; position: relative; height: auto;">
+			<table id="addRecordTable" class="EditTable" cellspacing="0"
+				cellpadding="0" border="0">
+				<tr rowpos="1" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Source
+						Client</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="createDB_sourceClient"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+					</select></td>
+					<td class="CaptionTD" style="padding-bottom: 4px;">&nbsp;</td>
+					<td class="DataTD" style="padding-bottom: 4px;">&nbsp;</td>
+				</tr>
+				<tr rowpos="2" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Source DB
+						String</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="createDB_sourceDBString"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+					</select> <span id="createDB_srcDBSize"
+						style="color: red; font-weight: bold; padding-bottom: 4px;">
+					</span></td>
+					<td class="CaptionTD" style="padding-bottom: 4px;">&nbsp;</td>
+					<td class="DataTD" style="padding-bottom: 4px;">&nbsp;</td>
+				</tr>
+				<tr rowpos="3" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Target
+						Client</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="createDB_targetClient"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+					</select></td>
+					<td class="CaptionTD" style="padding-bottom: 4px;">Target DB
+						String</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><input
+						type="text" id="createDB_targetDbString"
+						name="createDB_targetDbString"
+						class="FormElement ui-widget-content ui-corner-all"></td>
+				</tr>
+				<tr rowpos="4" class="FormData">
+					<td class="CaptionTD"
+						style="padding-bottom: 4px; vertical-align: top; padding-top: 8px;">
+						Target DB Host</td>
+					<td class="DataTD" colspan="3" style="padding-bottom: 4px;">
+						<div id="createDB_targetDbHostDiv">
+							<table>
+								<tr>
+									<td>
+										<table id="createDB_targetDbHostGrid">
+											<tr>
+												<td></td>
+											</tr>
+										</table>
+										<div id="createDB_targetDbHostDBPager"></div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr rowpos="5" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Target DB
+						IP</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><input
+						type="text" id="createDB_targetDBIp"
+						class="FormElement ui-widget-content ui-corner-all"></td>
+					<td class="CaptionTD" style="padding-bottom: 4px;">Target DB
+						SID</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><input
+						type="text" id="createDB_targetDbSid"
+						class="FormElement ui-widget-content ui-corner-all"></td>
+				</tr>
+
+				<tr rowpos="6" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Memory</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><span
+						class="FormElement"> <span
+							class="ui-spinner ui-widget ui-widget-content ui-corner-all">
+								<input type="text" id="createDB_memory" value="1024"
+								style="width: 85px !important" class="customelement"
+								role="spinbutton" />
+						</span>
+					</span> <span style="color: red; font-weight: bold;">&nbsp;(MB)</span></td>
+					<td class="CaptionTD" style="padding-bottom: 4px;">Enable
+						Backup for Target DB</td>
+					<td class="DataTD"
+						style="vertical-align: middle; padding-bottom: 4px;"><input
+						type="checkbox" id="createDB_bckupTrgtDB"
+						rowid="_empty" role="checkbox" class="FormElement"></td>
+				</tr>
+
+				<tr rowpos="7" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Comments</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><textarea
+							rows="1" cols="25" id="createDB_comments" rowid="_empty"
+							role="textbox" multiline="true"
+							class="FormElement ui-widget-content ui-corner-all"></textarea></td>
+					<td class="CaptionTD" style="padding-bottom: 4px;">Email</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><textarea
+							rows="1" cols="25" id="createDB_email" rowid="_empty"
+							role="textbox" multiline="true"
+							class="FormElement ui-widget-content ui-corner-all"></textarea></td>
+				</tr>
+
+				<tr rowpos="8" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Start Time
+					</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><input
+						type="text" id="createDB_startTime" rowid="_empty" role="textbox"
+						class="FormElement ui-widget-content ui-corner-all"></td>
+					<td class="CaptionTD" style="padding-bottom: 4px;">&nbsp;</td>
+					<td class="DataTD" style="padding-bottom: 4px;">&nbsp;</td>
+				</tr>
+			</table>
+
+		</form>
+	</div>
+</div>
+
+<div id="createDB_ErrorDiv" title=" Error ">
+	<p>Connect String already exists</p>
+</div>
+
+<div id='cpuResourceManager_addRecordDiv' class="ui-jqdialog-content ui-widget-content">
+	<div>
+		<div id="cpuResourceManager_errorMessage" style="color: red; padding: 5px;">
+		<div></div>
+		</div>
+		<form id="form_CpuResourceManager" class="FormGrid"
+			style="width: auto; overflow: auto; position: relative; height: auto;">
+			<table id="cpuResourceManager_addRecordTable" class="EditTable"
+				cellspacing="0" cellpadding="0" border="0">
+				<tr rowpos="1" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Client</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="cpuResourceManager_client"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+					</select></td>
+				</tr>
+				<tr rowpos="2" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">VM Name</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="cpuResourceManager_vmName"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+						<option value> Select </option> 
+					</select></td>
+				</tr>
+				<tr rowpos="3" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Request
+						Type</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="cpuResourceManager_requestType"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+<!-- 							<option value> Select </option>  -->
+							<option value="enable" role="option">Enable</option>
+							<option value="disable" role="option">Disable</option>
+					</select></td>
+				</tr>
+				<tr rowpos="4" class="FormData">
+					<td class="DataTD" colspan="2" style="padding-bottom: 4px;">
+						<div id="cpuResourceManager_cpuLimitDiv">
+							<table>
+								<tr>
+									<td>
+										<table id="cpuResourceManager_cpuLimitGrid">
+											<tr>
+												<td></td>
+											</tr>
+										</table>
+										<div id="cpuResourceManager_cpuLimitPager"></div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr rowpos="5" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Start Time
+					</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><input
+						type="text" id="cpuResourceManager_startTime" rowid="_empty"
+						role="textbox" class="FormElement ui-widget-content ui-corner-all">
+					</td>
+				</tr>
+				<tr rowpos="6" class="FormData">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Email</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><textarea
+							rows="1" cols="25" id="cpuResourceManager_email" rowid="_empty"
+							role="textbox" multiline="true"
+							class="FormElement ui-widget-content ui-corner-all"></textarea></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+
+<div id='cpuRsrcManager_cpuAllocationErrDiv' title="Error">
+	<p>Total CPU allocation must be 100%</p>
+</div>
+
+<div id='cpuRsrcManager_gridInlineEditErrDiv1' title="Error">
+	<p>Column CPU Limit(%) expects only numeric input and value should be between 0 to 100</p>
+</div>
+
+<div id='cpuRsrcManager_gridInlineEditErrDiv2' title="Error">
+	<p>Column CPU Limit(%) value should be in between 0 to 100</p>
+</div>
+
+<div id='cpuRsrcManager_gridInlineEditErrDiv3' title="Error">
+	<p>CPU Limit can not be left blank and value should be in between 0 to 100</p>
+</div>
+
+<div id='cpuRsrcManager_EditErrDiv' title="Error">
+	<p>Please select a Row</p>
+</div>
+
+<div id='v3DataModel_addRecordDiv' class="ui-jqdialog-content ui-widget-content" title ="Compare DB's">
+	<div>
+		<div id="v3DataModel_errorMessage" style="color: red; padding: 5px;">
+		<div></div>
+		</div>
+<!-- 		<form id="form_v3DataModel" class="FormGrid" action="UploadServlet" method="post" enctype="multipart/form-data" -->
+<!-- 			style="width: auto; overflow: auto; position: relative; height: auto;"> -->
+		<form id="form_v3DataModel" class="FormGrid" method="post" action="rest/DBAUtilRestService/getSrcDumpContent" enctype="multipart/form-data"
+			style="width: auto; overflow: auto; position: relative; height: auto;">
+			<table id="v3DataModel_addRecordTable" class="EditTable"
+				cellspacing="0" cellpadding="0" border="0">
+				<tr rowpos="1" class="FormData" id="tr_typeOfDBCompare">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Type of DB Compare</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="v3DataModel_typeOfDBCompare"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+						<option value> Select </option>
+						<option value="srcDBTrgDB"> Source DB - Target DB </option>
+						<option value="srcDBTrgDump"> Source DB - Target Dump File </option>
+						<option value="srcDumpTrgDB"> Source Dump File - Target DB </option>
+						<option value="srcDumpTrgDump"> Source Dump File - Target Dump File </option> 
+					</select></td>
+				</tr>
+				<tr rowpos="2" class="FormData" id="tr_srcClient">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Source Client</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="v3DataModel_srcClient"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+					</select></td>
+				</tr>
+				<tr rowpos="3" class="FormData" id="tr_srcDB">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Source DB</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="v3DataModel_srcDB"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+					</select></td>
+				</tr>
+				<tr rowpos="4" class="FormData" id="tr_srcDBDump">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Source DB Dump</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;">
+						<!-- <input type="file" name="file" id="v3DataModel_srcDBDump" accept=".sql"
+						class="FormElement" width="250"> -->
+						<input id="v3DataModel_srcDBDump" type="file" name="files[]"
+							style="color: transparent;" data-url="UploadServlet"
+							title=" Choose Sql file" accept="sql/*,SQL/*"> <br> 
+						<span id="srcDbDumpfileName"></span>
+						
+						<!-- <input id="fileupload" type="file" name="files[]"
+							style="color: transparent;" data-url="UploadServlet"
+							title=" Choose XLS file" accept="xls/*,xlsx/*"> <br>
+						<span id="fileName"></span> -->
+					</td>
+					<!-- <td class="CaptionTD" style="padding-bottom: 4px;">
+					<input type= "submit" value="Upload" id="v3DataModel_srcDBDump_uploadBtn">
+					</td> -->
+				</tr>
+				
+				<tr rowpos="5" class="FormData" id="tr_trgClient">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Target Client</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="v3DataModel_trgClient"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+					</select></td>
+				</tr>
+				<tr rowpos="6" class="FormData" id="tr_trgDB">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Target DB</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;"><select
+						role="select" id="v3DataModel_trgDB"
+						class="FormElement ui-widget-content ui-corner-all" width="250">
+					</select></td>
+				</tr>
+				<tr rowpos="7" class="FormData" id="tr_trgDBDump">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Source DB Dump</td>
+					<td class="DataTD"
+						style="vertical-align: bottom; padding-bottom: 4px;">
+						<input type="file" name="file" id="v3DataModel_trgDBDump" accept=".sql"
+						class="FormElement" width="250">
+					</td>
+					<!-- <td class="CaptionTD" style="padding-bottom: 4px;">
+					<input type= "submit" value="Upload" id="v3DataModel_trgDBDump_uploadBtn">
+					</td> -->
+				</tr>
+				
+				<tr rowpos="8" class="FormData" id="tr_scheduledTime">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Scheduled Time
+					</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><input
+						type="text" id="v3DataModel_scheduledTime" rowid="_empty"
+						role="textbox" class="FormElement ui-widget-content ui-corner-all">
+					</td>
+				</tr>
+				<tr rowpos="9" class="FormData" id="tr_email">
+					<td class="CaptionTD" style="padding-bottom: 4px;">Email</td>
+					<td class="DataTD" style="padding-bottom: 4px;"><textarea
+							rows="1" cols="25" id="v3DataModel_email" rowid="_empty"
+							role="textbox" multiline="true"
+							class="FormElement ui-widget-content ui-corner-all"></textarea></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+
+<!-- <div id="sqlFileUploadSuccessDiv" style="margin: 0px"
+		title=" Sql File Upload Status  ">
+		<p>Sql file Uploaded Successfully.</p>
+</div> -->
+
+<div id="sqlFileUploadFailureDiv" style="margin: 0px"
+		title=" Sql File Upload Status  ">
+	<p>Sql Upload Failed..</p>
+</div>
+
+<form action="fileServlet2" method="post" name="fileServlet2">
+	<input type="hidden" id="gridContent" name="gridContent"> <input
+		type="hidden" id="fileName" name="fileName">
+</form>
+
+<div id="mainPopup" style="display: none;"></div>
+<div id="histPopup" style="display: none;"></div>
+
+<div class='footerDiv'>
+	&copy; Vitech Systems Group, Inc. 1996, All Rights Reserved <br> <a
+		href='https://www.vitechinc.com/' target='_blank'
+		style="color: inherit !important; text-align: center">
+		https://www.vitechinc.com </a>
+</div>
+
+</body>
+</html>

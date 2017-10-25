@@ -1,0 +1,73 @@
+* { margin: 0; padding: 0; } 
+body { background: #f0f6fa url('img/bg.png'); font-size: 62.5%; color: #343434; font-family: Corbel, "Lucida Grade", "Bitstream Vera Sans", "Luxi Serif", Verdana, Arial, sans-serif; }
+
+ul { list-style: none; }
+
+img { border: 0; }
+
+a { color: #7496ce; }
+a:hover { color: #89afee; }
+
+h1 { font-size: 2.223em; color: #656565; font-weight: normal; letter-spacing: -0.05em; margin-bottom: 5px; }
+h2 { font-size: 2.2em; font-family: Georgia, Times New Roman, serif; font-weight: normal; font-style: italic; letter-spacing: -0.08em; color: #839874; padding-top: 25px; }
+h3 { font-size: 1.8em; font-weight: bold; text-decoration: underline; line-height: 2.4em; margin-bottom: 6px; }
+
+p { font-size: 1.3em; line-height: 1.25em; color: #666; margin-bottom: 15px; }
+
+#wrap { display: block; margin: 0 auto; padding: 0px 40px; }
+
+#adminlink { position: relative; }
+#adminlink a.hvr { background: #fff; color: #3f6998; }
+
+
+#header { 
+display: block;
+position: relative;
+height: 55px;
+border: 0;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+-moz-border-radius-bottomleft: 5px;
+-moz-border-radius-bottomright: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+background: #7499bf;
+background: -moz-linear-gradient(top,  #7499bf 0%, #4579ac 50%, #255f97 51%, #2969a2 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7499bf), color-stop(50%,#4579ac), color-stop(51%,#255f97), color-stop(100%,#2969a2));
+background: -webkit-linear-gradient(top,  #7499bf 0%,#4579ac 50%,#255f97 51%,#2969a2 100%);
+background: -o-linear-gradient(top,  #7499bf 0%,#4579ac 50%,#255f97 51%,#2969a2 100%);
+background: -ms-linear-gradient(top,  #7499bf 0%,#4579ac 50%,#255f97 51%,#2969a2 100%);
+background: linear-gradient(to bottom,  #7499bf 0%,#4579ac 50%,#255f97 51%,#2969a2 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7499bf', endColorstr='#2969a2',GradientType=0 );
+-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.40);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.40);
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.40);
+}
+
+.logo { float: left; color: #fff; display: block; margin-left: 10px; font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif; font-size: 3.0em; letter-spacing: normal; line-height: 55px; }
+
+.menunav { position: absolute; left: 360px; }
+.menunav li { display: block; font-size: 1.8em; float: left;  }
+
+
+.menunav a { display: block; line-height: 55px; color: #b6cadd; font-weight: bold; text-decoration: none; padding: 0 10px; }
+.menunav a:hover { color: #fff; }
+
+.loginasnav { position: absolute; right:130px;font-size: 1.8em; float: left; font-weight: bold; color: #b6cadd; }
+
+#adminlist { background: #fff; display: none; position: absolute; padding-top: 7px; -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.5); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
+#adminlist .sub { background: #fff;  }
+#adminlist .sub li { font-size: 1.0em; font-weight: bold; background: #fff; }
+#adminlist .sub li a { display: block; line-height: 2.3em; padding: 2px 4px; color: #596774; width: 150px; }
+#adminlist .sub li a:hover { background: #537db9; color: #fff; }
+
+#avatar { float: right; display: block; width: 240px; }
+#avatar img { padding: 3px; border: 1px solid #cbcbcb; }
+
+#bdy { display: block; background: #fff; min-height: 200px; margin-top: 50px; padding: 11px 20px; padding-bottom: 30px; }
+
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }

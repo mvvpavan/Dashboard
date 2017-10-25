@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/gurido-jquery-ui.css" type="text/css" />
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/connect.css" />
+
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.3.0.js"></script>
+<!-- <script type="text/javascript" src="js/jquery-1.8.3.js"></script> -->
+<!-- <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.js"></script> -->
+<script src="https://malsup.github.io/jquery.blockUI.js"></script>
+<script type="text/javascript" src="js/jquery.blockUI-1.33.js"></script>
+<meta charset="ISO-8859-1">
+<title>DBA Utility</title>
+<script>
+	$(function() {
+
+		$("#loginForm").on("submit", function(e){
+ 			
+ 			showProgress();
+ 			if (checkForm(loginForm)) {
+ 				
+ 				loginSumbmitForm();
+ 				return false;
+ 			}
+ 			hideProgress();
+ 			e.preventDefault();
+ 		});
+		
+		function loginSumbmitForm() {
+			
+			showProgress();
+			var urlVal = "rest/DBAUtilRestService/login";
+
+			$
+					.ajax({
+						url : urlVal,
+						data : $("#loginForm").serialize(),
+						type : "POST"
+
+					})
+					.done(
+							function(data) {
+								
+								if (data) {
+									if (data.status == "Success") {
+										// 					var urlVal = "rest/DBAUtilRestService/postLogin";
+										window.location
+												.replace("rest/DBAUtilRestService/postLogin");
+
+									} else {
+										$("#loginErrorMessage").text(
+												data.message);
+									}
+								}
+								hideProgress();
+							});
+
+		}
+
+		function initDialog() {
+			$("#progressDialog").dialog({
+				dialogClass : "no-close",
+				autoOpen : false,
+				closeOnEscape : false,
+				resizable : false,
+				modal : true
+
+			});
+		}
+
+		initDialog();
+		function showProgress() {
+			// 			$('#progressDialog').dialog("open");
+			$('#form').block({
+				message : '<h3> Connecting ... </h3>'
+			});
+		}
+		function hideProgress() {
+			// 			$('#form').dialog("close");
+			$('#form').unblock();
+		}
+		// 		showProgress();
+
+		function checkForm(form) {
+			
+			if (form.username.value == "") {
+				// 		      alert("Error: Username cannot be blank!");
+				form.username.focus();
+				$("#loginErrorMessage")
+						.text("Error: Username cannot be blank ");
+				return false;
+			}
+			if (form.password.value == "") {
+				// 		      alert("Error: Password cannot be blank!");
+				form.password.focus();
+				$("#loginErrorMessage")
+						.text("Error: Password cannot be blank ");
+				return false;
+			}
+
+			return true;
+		}
+		;
+
+		$("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+		$("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+
+	});
+</script>
+
+</head>
+<body>
+	<div id="loadingScreen"
+		style="position: absolute; width: 100%; min-height: 100%;">
+		<div id="loginErrorMessage">
+			<div></div>
+		</div>
+		<div>
+			<!-- 		value="mpalagani" -->
+			<div class="login">
+				<div class="logo">
+					<div class="form">
+						<form id="loginForm" style="display: block;">
+							<label class="inputLabel" for="username">User Name:</label> <input
+								type="text" class="gwt-TextBox enterClass" id="username"
+								name="username">
+							<!-- 							<input -->
+							<!-- 								type="text" class="gwt-TextBox" id="username" name="username"  value="mpalagani" > -->
+							<label class="inputLabel" for="password">Password:</label> <input
+								type="password" class="gwt-PasswordTextBox enterClass"
+								id="password" name="password">
+
+							<!-- 								<input -->
+							<!-- 								type="password" class="gwt-PasswordTextBox" id="password" name="password" value="mpalagani" > -->
+							<table style="margin-top: 10px; width: 100%;">
+								<tbody>
+									<tr>
+
+										<td align="left" style="vertical-align: top;"><div
+												class="buttons logins">
+												<!-- <button type="button" class="button" id="loginButton"
+													name="loginButton" title="Log In">Log In</button> -->
+													<button type="submit" class="button" id="loginButton"
+													name="loginButton" title="Log In">Log In</button>
+											</div></td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+
+					</div>
+				</div>
+
+				<div class="bottomContent">
+					<div class="v3logo"></div>
+					<div class="instance">
+
+						<div id="instanceName" style="color: white">
+							<div id="instanceNameValue">DBA UTILITY</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div align="center">
+				<div align="center" class="copyright">
+					Copyright © 2015. <a href="http://www.vitechinc.com/index.html"
+						target="_blank">Vitech Systems Group, Inc. </a>
+				</div>
+			</div>
+		</div>
+
+		<div id="progressDialog">
+			<div class="progress-label">Processing...</div>
+			<div id="progressbar"></div>
+		</div>
+	</div>
+</body>
+</html>

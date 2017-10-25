@@ -1,0 +1,56 @@
+@CHARSET "ISO-8859-1";
+
+
+.nav {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.nav li {
+	float: left;
+	width: 160px;
+	position: relative;
+}
+
+.nav li a {
+	/* background: #333; */
+	color: #fff;
+	  background: #0078AE;;
+	display: block;
+	padding: 7px 8px;
+	text-decoration: none;
+	border-top: 1px solid #069;
+}
+
+.nav li a:hover {
+	color: white;
+}
+
+/*=== submenu ===*/
+
+.nav ul {
+	display: none;
+	position: absolute;
+	margin-left: 0px;
+	list-style: none;
+	padding: 0px;
+}
+
+.nav ul li {
+	width: 160px;
+	float: left;
+}
+
+.nav ul a {
+	display: block;
+	height: 15px;
+	padding: 7px 8px;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #222;
+}
+
+.nav ul li a:hover {
+	color: yellow;
+}
